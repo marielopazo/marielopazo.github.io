@@ -1,0 +1,10 @@
+
+/node_modules/.bin
+my-app/index.html
+my-app/package-lock.json
+my-app/readme.md
+my-app/vite.config.js
+my-app/style.css
+my-app/package.json
+my-app/main.js
+my-app/.github/workflows/build.yml
