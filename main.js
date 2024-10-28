@@ -1,25 +1,4 @@
 import Map from 'ol/Map.js';
-import OSM from 'ol/source/OSM.js';
-import TileLayer from 'ol/layer/Tile.js';
-import View from 'ol/View.js';
-
-const map = new Map({
-  layers: [
-    new TileLayer({
-      source: new OSM(),
-    }),
-  ],
-  target: 'map',
-  view: new View({
-    projection: 'EPSG:4326',
-    center: [0, 0],
-    zoom: 2,
-  }),
-});
-
-
-/*
-import Map from 'ol/Map.js';
 import TileGrid from 'ol/tilegrid/TileGrid.js';
 import TileLayer from 'ol/layer/WebGLTile.js';
 import View from 'ol/View.js';
@@ -236,6 +215,9 @@ function updateViewProjection() {
   }
 }
 
+/**
+ * Handle change event.
+ */
 viewProjSelect.onchange = function () {
   updateViewProjection();
 };
@@ -251,7 +233,9 @@ const updateRenderEdgesOnLayer = function (layer) {
   }
 };
 
-
+/**
+ * Handle change event.
+ */
 baseLayerSelect.onchange = function () {
   const layer = layers[baseLayerSelect.value];
   if (layer) {
@@ -261,7 +245,9 @@ baseLayerSelect.onchange = function () {
   }
 };
 
-
+/**
+ * Handle change event.
+ */
 overlayLayerSelect.onchange = function () {
   const layer = layers[overlayLayerSelect.value];
   if (layer) {
@@ -271,11 +257,12 @@ overlayLayerSelect.onchange = function () {
   }
 };
 
-
+/**
+ * Handle change event.
+ */
 renderEdgesCheckbox.onchange = function () {
   renderEdges = renderEdgesCheckbox.checked;
   map.getLayers().forEach(function (layer) {
     updateRenderEdgesOnLayer(layer);
   });
 };
-*/
